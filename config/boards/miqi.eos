@@ -1,6 +1,5 @@
 # Rockchip RK3288 quad core 2GB SoC GBE
 BOARD_NAME="MiQi"
-BOARD_VENDOR="generic"
 BOARDFAMILY="rockchip"
 BOARD_MAINTAINER=""
 BOOTCONFIG="miqi-rk3288_defconfig"

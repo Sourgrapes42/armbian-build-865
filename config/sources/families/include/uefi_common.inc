@@ -10,7 +10,6 @@ declare -g SERIALCON="${SERIALCON:-tty1}"            # Consistent serial console
 declare -g UEFI_GRUB_TIMEOUT=${UEFI_GRUB_TIMEOUT:-3} # Default 3-seconds timeout for GRUB menu.
 declare -g BOARD_FIRMWARE_INSTALL="-full"            # Install full firmware for UEFI boards
 declare -g DISTRO_GENERIC_KERNEL=no
-declare -g POWER_MANAGEMENT_FEATURES=yes             # Suspend and resume might work well in UEFI, elsewhere is disabled by default
 
 case "${BRANCH}" in
 
@@ -22,7 +21,7 @@ case "${BRANCH}" in
 		;;
 	cloud)
 		declare -g GRUB_CMDLINE_LINUX_DEFAULT="selinux=0 loglevel=3 max_loop=32"
-		declare -g KERNEL_MAJOR_MINOR="6.18"
+		declare -g KERNEL_MAJOR_MINOR="6.12"
 		declare -g LINUXCONFIG="linux-uefi-${LINUXFAMILY}-cloud"
 		declare -g INSTALL_ARMBIAN_FIRMWARE="no"
 		declare -g EXTRAWIFI="no"
@@ -34,15 +33,15 @@ case "${BRANCH}" in
 		;;
 
 	legacy)
-		declare -g KERNEL_MAJOR_MINOR="6.12"
+		declare -g KERNEL_MAJOR_MINOR="6.6"
 		;;
 
 	current)
-		declare -g KERNEL_MAJOR_MINOR="6.18"
+		declare -g KERNEL_MAJOR_MINOR="6.12"
 		;;
 
 	edge)
-		declare -g KERNEL_MAJOR_MINOR="6.19"
+		declare -g KERNEL_MAJOR_MINOR="6.18"
 		;;
 esac
 

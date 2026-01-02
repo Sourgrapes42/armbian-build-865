@@ -1,7 +1,6 @@
 alsa-utils
 bash-completion
 bc
-btrfs-progs
 console-setup
 cron
 curl
@@ -30,7 +29,6 @@ mmc-utils
 ncurses-term
 nano
 openssh-server
-pahole
 parted
 psmisc
 rsync
