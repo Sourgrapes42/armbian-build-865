@@ -1,6 +1,5 @@
 # Amlogic S805 quad core 1GB RAM SoC GBE
 BOARD_NAME="OneCloud"
-BOARD_VENDOR="amlogic"
 BOARDFAMILY="meson8b"
 BOARD_MAINTAINER="hzyitc"
 KERNEL_TARGET="current"

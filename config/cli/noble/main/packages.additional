@@ -5,6 +5,7 @@ automake
 avahi-autoipd
 bash-completion
 bison
+btrfs-progs
 build-essential
 cracklib-runtime
 dkms

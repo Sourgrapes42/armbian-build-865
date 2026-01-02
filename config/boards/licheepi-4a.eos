@@ -1,6 +1,5 @@
 # RISC-V LicheePi 4A
 BOARD_NAME="LicheePi 4A"
-BOARD_VENDOR="sipeed"
 BOARDFAMILY="thead"
 BOARD_MAINTAINER="chainsx"
 KERNEL_TARGET="current,edge,legacy"

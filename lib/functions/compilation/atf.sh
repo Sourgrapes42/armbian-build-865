@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0
 #
-# Copyright (c) 2013-2026 Igor Pecovnik, igor@armbian.com
+# Copyright (c) 2013-2023 Igor Pecovnik, igor@armbian.com
 #
 # This file is a part of the Armbian Build Framework
 # https://github.com/armbian/build/
@@ -72,9 +72,12 @@ compile_atf() {
 
 	if linux-version compare "${binutils_version}" gt "2.39" && linux-version compare "${binutils_version}" lt "2.42"; then
 		display_alert "Binutils version for ATF" ">= 2.39 and < 2.42, adding -Wl,--no-warn-rwx-segment" "info"
-		binutils_flags_atf="--no-warn-rwx-segment"
+		binutils_flags_atf="-Wl,--no-warn-rwx-segment"
+	elif linux-version compare "${binutils_version}" ge "2.42"; then
+		display_alert "Binutils version for ATF" ">= 2.42, adding -Wl,--no-warn-rwx-segments" "info"
+		binutils_flags_atf="-Wl,--no-warn-rwx-segments"
 	fi
-
+ 
 	# - ENABLE_BACKTRACE="0" has been added to workaround a regression in ATF. Check: https://github.com/armbian/build/issues/1157
 
 	run_host_command_logged "CROSS_COMPILE='ccache ${ATF_COMPILER}'" CCACHE_BASEDIR="$(pwd)" "CC='ccache ${ATF_COMPILER}gcc'" PATH="${toolchain}:${toolchain2}:${PATH}" \

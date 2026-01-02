@@ -1,6 +1,5 @@
 # Rockchip RK3399Pro hexa core NPU 4GB SoC GBe eMMC USB3 PCIe WiFi/BT
 BOARD_NAME="Tinker Edge R"
-BOARD_VENDOR="asus"
 BOARDFAMILY="rockchip64"
 BOARD_MAINTAINER=""
 BOOTCONFIG="tinker-edge-r_rk3399pro_defconfig"
